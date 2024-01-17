@@ -12,3 +12,6 @@ public CollectorRegistry collectorRegistry() {
 }
 
 io.prometheus.client.CollectorRegistry
+
+
+org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: io/prometheus/client/exporter/common/TextFormat
