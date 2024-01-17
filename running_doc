@@ -4,3 +4,9 @@ management.endpoint.prometheus.enabled=true
 management.endpoint.health.show-details=always
 
 Caused by: java.lang.ClassNotFoundException: io.prometheus.client.CollectorRegistry
+
+
+@Bean
+public CollectorRegistry collectorRegistry() {
+    return CollectorRegistry.defaultRegistry;
+}
