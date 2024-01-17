@@ -10,3 +10,5 @@ Caused by: java.lang.ClassNotFoundException: io.prometheus.client.CollectorRegis
 public CollectorRegistry collectorRegistry() {
     return CollectorRegistry.defaultRegistry;
 }
+
+io.prometheus.client.CollectorRegistry
