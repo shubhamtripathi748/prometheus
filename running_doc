@@ -21,6 +21,17 @@ topk(3,sum by(path,method)(rate(demo_api_request_duration_seconds_count[5m])))
 
 
 rule_files:
+
+
+{traces=~"process|root|span"}| logfmt |http_target="**/v1/**" status="STATUS_CODE_ERROR" |
+line_format="Service: {{.svc}},Endpoint: {{.http_target}},HTTP status code:{{.http_status_code}},Latency: {{.dur}},traceId={{.traceId}}"
+
+firewall
+
+sudo firewall-cmd --permanent --zone=public --add-port=9093/tcp
+sudo firewall-cmd --reload
+
+
   - alert.rules.yml
 alerting:
   alertmanagers:
