@@ -17,3 +17,18 @@ io.prometheus.client.CollectorRegistry
 org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: io/prometheus/client/exporter/common/TextFormat
 
 topk(3,sum by(path,method)(rate(demo_api_request_duration_seconds_count[5m])))
+
+
+
+rule_files:
+  - alert.rules.yml
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - 'localhost:9093'
+
+
+
+
+
