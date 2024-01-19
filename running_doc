@@ -29,6 +29,6 @@ alerting:
       - 'localhost:9093'
 
 
-
+https://github.com/shazforiot/Prometheusalertmanager/blob/main/prometheus.yml
 
 
